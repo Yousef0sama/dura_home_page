@@ -1,0 +1,268 @@
+
+$theme : rgb(9, 120, 151);
+$hover : rgb(3, 59, 74);
+$Hover : rgb(0, 0, 0, 0.07);
+$color-a : rgb(255, 255, 255);
+$color-b : rgb(60, 60, 60);
+$light : rgb(255, 255, 255);
+$dark : rgb(0, 17, 45);
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+*{
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Tajawal', sans-serif;
+    user-select: none;
+}
+
+.header{
+    background-color: $theme;
+    .logo{
+        h1{
+            padding: 20px;
+            a{
+                color: $color-a;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            &:focus{
+                text-decoration: none;
+            }
+        }
+    }
+    .links{
+        .lnks{
+            padding: 20px;
+            padding-top: 45px;
+            float: right;
+            a{
+                font-size: 22px;
+                padding: 0px 10px;
+                color: $color-a;
+                &:hover{
+                    text-decoration: none;
+                    color: $hover;
+                }
+                &:focus{
+                    text-decoration: none;
+                }
+            }
+        }
+        .toggle{
+            background-color: $hover;
+            padding: 5px 10px;
+            font-size: 28px;
+            border-radius: 8px;
+            color: $color-a;
+            margin-top: 35px;
+            margin-left: 50%;
+            display: none;
+            cursor: pointer;
+        }
+    }
+    .links-list{
+        background-color: $theme;
+        padding: 20px;
+        padding-top: 45px;
+        float: left;
+        display: none;
+        a{
+            font-size: 22px;
+            padding: 0px 10px;
+            color: $color-a;
+            width: 100%;
+            display: block;
+            &:hover{
+                text-decoration: none;
+                color: $hover;
+            }
+            &:focus{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.row{
+    margin-right: 0px;
+}
+
+.container{
+    div{
+        .offer{
+            padding: 5% 0px;
+            div{
+                div{
+                    h2{
+                        padding-top: 18px;
+                        padding-left: 5px;
+                    }
+                    ul{
+                        list-style-type: none;
+                        li{
+                            font-size: 23px;
+                            &::before{
+                                content: "";
+                                width: 20px;
+                                height: 20px;
+                                border: 10px solid transparent;
+                                border-left-color: $theme;
+                                display: inline-block;
+                                position: absolute;
+                                left: -5px;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .home{
+            div{
+                .des{
+                    float: left;
+                    .head{
+                        padding: 40px 0px;
+                        padding-top: 0px;
+                    }
+                    .text{
+                        p{
+                            font-size: 18px;
+                        }
+                    }
+                    .btns{
+                        padding: 20px 0px;
+                        padding-bottom: 80px;
+                        .btn{
+                            background-color: $theme;
+                            font-size: 20px;
+                            font-weight: 700;
+                            color: $color-a;
+                            border: none;
+                            outline: none;
+                            &:hover{
+                                background-color: $hover;
+                            }
+                        }
+                    }
+                }
+                .img{
+                    float: right;
+                    img{
+                        max-width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    background-color: $theme;
+    padding: 20px 0px;
+    div{
+        div{
+            padding: 20px 0px;
+            text-align: center;
+            h2{
+                color: $color-a;
+            }
+            a{
+                color: $color-a;
+                padding-left: 3px;
+                &:hover{
+                    color: $hover;
+                    text-decoration: none;
+                }
+                &:focus{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        .home{
+            div{
+                .img{
+                    padding-top: 5%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .container{
+        .home{
+            div{
+                .img{
+                    padding-top: 10%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .header{
+        .links{
+            .lnks{
+                display: none;
+            }
+            .toggle{
+                display: inline-block;
+            }
+        }
+    }
+
+    .container{
+        .offer{
+            div{
+                div{
+                    text-align: center;
+                    ul{
+                        text-align: left;
+                        margin-left: 40px;
+                        li{
+                            &::before{
+                                content: "";
+                                width: 20px;
+                                height: 20px;
+                                border: 10px solid transparent;
+                                border-left-color: $theme;
+                                display: inline-block;
+                                position: absolute;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .home{
+            div{
+                .des{
+                    text-align: center;
+                }
+                .img{
+                    position: relative;
+                    img{
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
